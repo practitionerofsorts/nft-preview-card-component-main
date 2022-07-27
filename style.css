@@ -7,6 +7,8 @@
     --Very-dark-blue-card: hsl(216, 50%, 16%);
     --Very-dark-blue-line: hsl(215, 32%, 27%);
     --White: hsl(0, 0%, 100%);
+
+    --br: 8px;
 }
 
 
@@ -28,11 +30,13 @@ body{
 }
 .card{
     padding: 1.5em;
+    border-radius: var(--br);
     background-color: var(--Very-dark-blue-card);
 }
 .card-image{
-    display: block;
     width: 24em;
+    display: block;
+    border-radius: var(--br);
 }
 .card h1{
     color: var(--White);
@@ -41,6 +45,41 @@ body{
 .card p{
     color: var(--Softblue);
     margin: .5em 0;
+}
+.space-between{
+    display: flex;
+    padding: .5em 0;
+    justify-content: space-between;
+}
+.price,.deadline{
+    display: flex;
+    gap: .4em;
+    align-items: center;
+    justify-content: center;
+}
+.price p{
+    color: var(--Cyan);
+}
+.profile{
+    gap: .8em;
+    display: flex;
+    padding-top: 1em ;
+    border-top: 2px solid var(--Very-dark-blue-line);
+}
+.profile img{
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    border: 1.5px solid var(--White);
+}
+.white-name{
+    color: var(--White);
+    margin-left: .2em;
+}
+.hover-cyan:hover{
+    color: var(--Cyan);
+    cursor: pointer;
+    transition: .3s ease-in-out;
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
